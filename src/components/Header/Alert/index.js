@@ -21,8 +21,10 @@ const AlertText = styled.div`
   justify-content: flex-start;
 `
 const SH3 = styled.h3`
-  font-family: Archivo-SemiBold, serif;
+  font-family: Archivo, sans-serif;
+  font-weight: 500;
   font-size: 13px;
+  color: #304156;
 `
 
 export default () => {

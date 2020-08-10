@@ -10,10 +10,13 @@ const IconsContainer = styled.div`
   align-items: center;
   justify-content: space-around;
 `
+const Image = styled.img`
+  cursor: pointer;
+`
 
 export default () => (
   <IconsContainer>
-    <img src={bell} alt="bell" />
-    <img src={menu} alt="menu" />
+    <Image src={bell} alt="bell" />
+    <Image src={menu} alt="menu" />
   </IconsContainer>
 )

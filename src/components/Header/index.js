@@ -39,12 +39,14 @@ const SH1 = styled.h1`
   font-weight: 700;
   font-size: 24px;
   flex: 3;
+  color: #304156;
 `
 const SH5 = styled.h5`
   font-family: Archivo, sans-serif;
   font-weight: 500;
   font-size: 13px;
   flex: 3;
+  color: #304156;
 `
 const ButtonsBox = styled.div`
   width: 100%;
@@ -68,7 +70,7 @@ const WhiteButton = styled.button`
   width: 119px;
   height: 40px;
   background: #ffffff;
-  color: black;
+  color: #304156;
   font-family: Archivo-Medium, sans-serif;
   font-size: 15px;
   border-radius: 3px;
