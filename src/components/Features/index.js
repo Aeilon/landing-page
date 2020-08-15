@@ -4,7 +4,7 @@ import Feature from "./Feature"
 
 const FeaturesSection = styled.section`
   width: 100%;
-  height: 500px;
+  height: 550px;
   display: flex;
   justify-content: center;
 `
@@ -36,6 +36,7 @@ const SH2 = styled.h2`
   font-size: 15px;
   color: #304156;
   flex: 1;
+  line-height: 1.4;
 `
 const FeaturesBox = styled.div`
   width: 100%;

@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import TopBar from "../components/TopBar"
 import Header from "../components/Header"
 import Features from "../components/Features"
+import Statistic from "../components/Statistic"
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
     <TopBar />
     <Header />
     <Features />
+    <Statistic />
   </Layout>
 )
 

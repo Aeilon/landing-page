@@ -5,7 +5,7 @@ import Alert from "./Alert"
 
 const Header = styled.header`
   width: 100%;
-  height: 500px;
+  height: 550px;
   display: flex;
   justify-content: center;
   background: #fafbfb;
@@ -47,6 +47,7 @@ const SH5 = styled.h5`
   font-size: 13px;
   flex: 3;
   color: #304156;
+  line-height: 1.4;
 `
 const ButtonsBox = styled.div`
   width: 100%;
