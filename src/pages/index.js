@@ -5,6 +5,7 @@ import TopBar from "../components/TopBar"
 import Header from "../components/Header"
 import Features from "../components/Features"
 import Statistic from "../components/Statistic"
+import Feature from "../components/Feature"
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <Header />
     <Features />
     <Statistic />
+    <Feature />
   </Layout>
 )
 
