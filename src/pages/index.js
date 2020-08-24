@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Features from "../components/Features"
 import Statistic from "../components/Statistic"
 import Feature from "../components/Feature"
+import Testimonials from "../components/Testimonials"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Features />
     <Statistic />
     <Feature />
+    <Testimonials />
   </Layout>
 )
 

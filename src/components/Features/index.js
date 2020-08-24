@@ -28,6 +28,9 @@ const SH1 = styled.h1`
   font-weight: 700;
   font-size: 25px;
   color: #304156;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
 `
 const SH2 = styled.h2`
