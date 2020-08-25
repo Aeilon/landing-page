@@ -73,7 +73,7 @@ const WhiteButton = styled.button`
   background: #ffffff;
   color: #304156;
   font-family: Archivo-Medium, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid lightgray;
@@ -92,12 +92,8 @@ export default () => {
             need the best photo{" "}
           </SH5>
           <ButtonsBox>
-            <BlueButton width="178px" bgColor="#0093FF" color="white">
-              Start for Free
-            </BlueButton>
-            <WhiteButton width="171px" bgColor="white" color="black">
-              Button Name
-            </WhiteButton>
+            <BlueButton>Start for Free</BlueButton>
+            <WhiteButton>Button Name</WhiteButton>
           </ButtonsBox>
         </HeaderBox>
         <ImageBox>
