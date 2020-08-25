@@ -9,7 +9,7 @@ const TopBar = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  padding: 0 10px;
+  padding: 0 18px;
 `
 
 export default () => (
