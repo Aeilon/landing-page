@@ -12,6 +12,8 @@ const StatisticSection = styled.section`
   display: flex;
   justify-content: center;
   background: #fafbfb;
+  padding-bottom: 20px;
+  padding-top: 20px;
 `
 const Wrapper = styled.div`
   width: 80%;

@@ -9,6 +9,18 @@ const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (min-width: 425px) {
+    width: 20%;
+  }
+  @media (min-width: 768px) {
+    width: 12%;
+  }
+  @media (min-width: 1024px) {
+    width: 9%;
+  }
+  @media (min-width: 1440px) {
+    width: 6%;
+  }
 `
 const Image = styled.img`
   cursor: pointer;

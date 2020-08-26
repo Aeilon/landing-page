@@ -23,8 +23,12 @@ const AlertText = styled.div`
 const SH3 = styled.h3`
   font-family: Archivo, sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   color: #304156;
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
 `
 
 export default () => {

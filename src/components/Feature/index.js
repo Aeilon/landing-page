@@ -11,6 +11,8 @@ const FeatureSection = styled.section`
   display: flex;
   justify-content: center;
   background: #ffffff;
+  padding-bottom: 20px;
+  padding-top: 20px;
 `
 const Wrapper = styled.div`
   width: 80%;

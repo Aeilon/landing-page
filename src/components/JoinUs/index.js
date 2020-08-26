@@ -6,6 +6,8 @@ const JoinUsSection = styled.section`
   height: 200px;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 `
 const Wrapper = styled.div`
   width: 80%;
