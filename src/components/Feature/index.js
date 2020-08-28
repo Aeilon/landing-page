@@ -13,6 +13,10 @@ const FeatureSection = styled.section`
   background: #ffffff;
   padding-bottom: 20px;
   padding-top: 20px;
+
+  @media (min-width: 1440px) {
+    height: 679px;
+  }
 `
 const Wrapper = styled.div`
   width: 80%;
@@ -20,31 +24,176 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+  @media (min-width: 1440px) {
+    width: 65%;
+    flex-direction: row;
+  }
 `
 const TasksBox = styled.div`
   width: 100%;
   height: 50%;
   padding-top: 20px;
+  order: 2;
+
+  @media (min-width: 1440px) {
+    order: 1;
+  }
 `
-const Image = styled.img`
+const FirstImage = styled.img`
   width: 70%;
   position: relative;
-  top: ${props => props.top};
-  left: ${props => props.left};
-  z-index: ${props => props.zIndex};
+  top: 120px;
+  left: 20px;
+  z-index: 3;
+
+  @media (min-width: 375px) {
+    top: 100px;
+  }
+  @media (min-width: 425px) {
+    top: 80px;
+    left: 40px;
+  }
+  @media (min-width: 768px) {
+    width: 50%;
+    top: 70px;
+    left: 120px;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+    top: 70px;
+    left: 200px;
+  }
+  @media (min-width: 1440px) {
+    width: 50%;
+    top: 90px;
+    left: 120px;
+  }
+  @media (min-width: 1600px) {
+    width: 50%;
+    top: 110px;
+    left: 120px;
+  }
+  @media (min-width: 1900px) {
+    width: 50%;
+    top: 120px;
+    left: 130px;
+  }
 `
+const SecondImage = styled.img`
+  width: 70%;
+  position: relative;
+  top: -150px;
+  left: 0;
+  z-index: 2;
+
+  @media (min-width: 375px) {
+    top: -180px;
+  }
+  @media (min-width: 425px) {
+    top: -220px;
+  }
+  @media (min-width: 768px) {
+    width: 50%;
+    top: -20px;
+    left: -260px;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+    top: -20px;
+    left: -230px;
+  }
+  @media (min-width: 1440px) {
+    width: 50%;
+    top: -20px;
+    left: -260px;
+  }
+  @media (min-width: 1600px) {
+    width: 50%;
+    top: -20px;
+    left: -270px;
+  }
+  @media (min-width: 1900px) {
+    width: 50%;
+    top: -20px;
+    left: -320px;
+  }
+`
+const ThirdImage = styled.img`
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  top: -300px;
+  left: 77px;
+
+  @media (min-width: 375px) {
+    top: -350px;
+    left: 85px;
+  }
+  @media (min-width: 425px) {
+    top: -430px;
+    left: 120px;
+  }
+  @media (min-width: 768px) {
+    width: 50%;
+    top: -250px;
+    left: 250px;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+    top: -270px;
+    left: 300px;
+  }
+  @media (min-width: 1440px) {
+    width: 50%;
+    top: -230px;
+    left: 250px;
+  }
+  @media (min-width: 1600px) {
+    width: 50%;
+    top: -250px;
+    left: 250px;
+  }
+  @media (min-width: 1900px) {
+    width: 50%;
+    top: -310px;
+    left: 300px;
+  }
+`
+
 const TextBox = styled.div`
   width: 100%;
   display: flex;
   height: 30%;
   flex-direction: column;
   justify-content: space-evenly;
+
+  @media (min-width: 1440px) {
+    order: 2;
+    height: 45%;
+    width: 80%;
+  }
 `
 const SH1 = styled.h1`
   font-family: Archivo, sans-serif;
   font-weight: 700;
   font-size: 25px;
   color: #304156;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 27px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 29px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 32px;
+    text-align: start;
+  }
 `
 const SH4 = styled.h4`
   font-family: Archivo, sans-serif;
@@ -52,6 +201,25 @@ const SH4 = styled.h4`
   font-size: 13px;
   line-height: 1.3;
   color: #304156;
+  text-align: center;
+
+  @media (min-width: 375px) {
+    line-height: 1.4;
+  }
+  @media (min-width: 425px) {
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 17px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: start;
+  }
 `
 
 export default () => {
@@ -59,9 +227,9 @@ export default () => {
     <FeatureSection>
       <Wrapper>
         <TasksBox>
-          <Image src={Task1} alt="task1" top="120px" left="20px" zIndex="3" />
-          <Image src={Task2} alt="task2" top="-150px" left="0px" zIndex="2" />
-          <Image src={Task3} alt="task3" top="-300px" left="77px" zIndex="1" />
+          <FirstImage src={Task1} alt="task1" />
+          <SecondImage src={Task2} alt="task2" />
+          <ThirdImage src={Task3} alt="task3" />
         </TasksBox>
         <TextBox>
           <SH1>Addiction When</SH1>
