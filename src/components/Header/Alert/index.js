@@ -7,6 +7,17 @@ const AlertBox = styled.div`
   height: 28px;
   display: flex;
   flex: 1;
+  padding-left: 20px;
+
+  @media (min-width: 768px) {
+    flex: 2;
+    padding-left: 45px;
+    width: 170px;
+  }
+  @media (min-width: 1440px) {
+    padding-left: 0;
+    flex: 1;
+  }
 `
 const AlertImg = styled.div`
   flex: 1;
@@ -19,6 +30,10 @@ const AlertText = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (min-width: 1600px) {
+    flex: 6;
+  }
 `
 const SH3 = styled.h3`
   font-family: Archivo, sans-serif;

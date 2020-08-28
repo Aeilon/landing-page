@@ -10,6 +10,19 @@ const TopBar = styled.div`
   align-items: center;
   height: 56px;
   padding: 0 18px;
+  @media (min-width: 425px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) {
+    padding-left: 25px;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 30px;
+  }
+  @media (min-width: 1440px) {
+    padding-right: 25px;
+    padding-left: 40px;
+  }
 `
 
 export default () => (

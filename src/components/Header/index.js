@@ -44,6 +44,10 @@ const Wrapper = styled.div`
     width: 75%;
     margin-left: 10%;
   }
+  @media (min-width: 1600px) {
+    width: 80%;
+    margin-left: 15%;
+  }
 `
 const HeaderBox = styled.div`
   width: 100%;
@@ -52,7 +56,7 @@ const HeaderBox = styled.div`
   flex-direction: column;
 
   @media (min-width: 768px) {
-    flex: 2;
+    height: 200px;
   }
   @media (min-width: 1440px) {
     height: 50%;
@@ -80,11 +84,20 @@ const Image = styled.img`
   @media (min-width: 425px) {
     width: 90%;
   }
+  @media (min-width: 552px) {
+    width: 75%;
+  }
+  @media (min-width: 632px) {
+    width: 65%;
+  }
   @media (min-width: 768px) {
-    width: 55%;
+    width: 75%;
   }
   @media (min-width: 1440px) {
     width: 95%;
+  }
+  @media (min-width: 1600px) {
+    width: 80%;
   }
 `
 const SH1 = styled.h1`
@@ -93,6 +106,7 @@ const SH1 = styled.h1`
   font-size: 24px;
   flex: 3;
   color: #304156;
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 28px;
@@ -102,6 +116,7 @@ const SH1 = styled.h1`
   }
   @media (min-width: 1440px) {
     font-size: 38px;
+    text-align: start;
   }
 `
 const SH5 = styled.h5`
@@ -168,6 +183,9 @@ const BlueButton = styled.button`
     width: 171px;
     height: 48px;
   }
+  @media (min-width: 1600px) {
+    margin-right: 12px;
+  }
 `
 const WhiteButton = styled.button`
   width: 119px;
@@ -200,6 +218,9 @@ const WhiteButton = styled.button`
     width: 178px;
     height: 48px;
     font-size: 18px;
+  }
+  @media (min-width: 1600px) {
+    margin-right: 12px;
   }
 `
 
