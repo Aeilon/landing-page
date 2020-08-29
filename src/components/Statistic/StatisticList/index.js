@@ -9,7 +9,11 @@ const ListBox = styled.div`
 
   @media (min-width: 768px) {
     position: relative;
-    bottom: 150px;
+    right: 40px;
+    bottom: 140px;
+  }
+  @media (min-width: 1900px) {
+    right: 125px;
   }
 `
 const ImgBox = styled.div`

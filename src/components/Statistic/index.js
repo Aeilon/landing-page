@@ -74,11 +74,16 @@ const IllustrationBox = styled.div`
     height: 500px;
   }
   @media (min-width: 1440px) {
-    //width: 450px;
+    padding-top: 50px;
     flex: 2;
   }
   @media (min-width: 1600px) {
     flex: 8;
+    margin-left: 120px;
+  }
+  @media (min-width: 1900px) {
+    margin-left: 150px;
+    flex: 10;
   }
 `
 const SH1 = styled.h1`
@@ -132,9 +137,13 @@ const Image = styled.img`
 
   @media (min-width: 768px) {
     position: relative;
+    width: 80%;
     top: ${props => props.top};
     left: ${props => props.left};
     z-index: ${props => props.zIndex};
+  }
+  @media (min-width: 1900px) {
+    width: 60%;
   }
 `
 
@@ -152,8 +161,8 @@ export default () => {
         </TextBox>
         <IllustrationBox>
           <Image src={Statistic1} alt="1" zIndex="2" />
-          <Image src={Statistic2} alt="2" zIndex="3" left="120px" top="-30px" />
-          <Image src={Statistic3} alt="3" top="-160px" zIndex="1" />
+          <Image src={Statistic2} alt="2" zIndex="3" left="120px" top="-70px" />
+          <Image src={Statistic3} alt="3" top="-150px" zIndex="1" />
           <StatisticList />
         </IllustrationBox>
       </Wrapper>

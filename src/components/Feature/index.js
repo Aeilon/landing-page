@@ -68,19 +68,19 @@ const FirstImage = styled.img`
     left: 200px;
   }
   @media (min-width: 1440px) {
-    width: 50%;
-    top: 90px;
-    left: 120px;
+    width: 45%;
+    top: 70px;
+    left: 90px;
   }
   @media (min-width: 1600px) {
-    width: 50%;
-    top: 110px;
-    left: 120px;
+    width: 40%;
+    top: 80px;
+    left: 90px;
   }
   @media (min-width: 1900px) {
-    width: 50%;
-    top: 120px;
-    left: 130px;
+    width: 42%;
+    top: 100px;
+    left: 120px;
   }
 `
 const SecondImage = styled.img`
@@ -107,19 +107,19 @@ const SecondImage = styled.img`
     left: -230px;
   }
   @media (min-width: 1440px) {
-    width: 50%;
+    width: 45%;
     top: -20px;
     left: -260px;
   }
   @media (min-width: 1600px) {
-    width: 50%;
+    width: 40%;
     top: -20px;
-    left: -270px;
+    left: -260px;
   }
   @media (min-width: 1900px) {
-    width: 50%;
+    width: 42%;
     top: -20px;
-    left: -320px;
+    left: -250px;
   }
 `
 const ThirdImage = styled.img`
@@ -148,19 +148,19 @@ const ThirdImage = styled.img`
     left: 300px;
   }
   @media (min-width: 1440px) {
-    width: 50%;
+    width: 45%;
     top: -230px;
-    left: 250px;
+    left: 200px;
   }
   @media (min-width: 1600px) {
-    width: 50%;
-    top: -250px;
-    left: 250px;
+    width: 40%;
+    top: -220px;
+    left: 200px;
   }
   @media (min-width: 1900px) {
-    width: 50%;
-    top: -310px;
-    left: 300px;
+    width: 42%;
+    top: -260px;
+    left: 250px;
   }
 `
 
@@ -171,6 +171,9 @@ const TextBox = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
 
+  @media (min-width: 768px) {
+    height: 55%;
+  }
   @media (min-width: 1440px) {
     order: 2;
     height: 45%;

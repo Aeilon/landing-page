@@ -35,8 +35,17 @@ const FeatureBox = styled.div`
   @media (min-width: 425px) {
     height: 65px;
   }
-  @media (min-width: 1600px) {
+  @media (min-width: 1440px) {
+    width: 120%;
     padding-left: 35px;
+  }
+  @media (min-width: 1600px) {
+    padding-left: 60px;
+    width: 130%;
+  }
+  @media (min-width: 1900px) {
+    padding-left: 135px;
+    width: 130%;
   }
 `
 const TextBox = styled.div`
@@ -53,7 +62,7 @@ const TextBox = styled.div`
     flex: 4;
   }
   @media (min-width: 1600px) {
-    flex: 6;
+    flex: 8;
   }
 `
 const SH3 = styled.h3`
