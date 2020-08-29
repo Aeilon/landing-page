@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import FooterBottom from "./FooterBottom"
 
 const Footer = styled.footer`
   width: 100%;
@@ -8,6 +7,10 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   background: #fafbfb;
+
+  @media (min-width: 768px) {
+    height: 250px;
+  }
 `
 const Wrapper = styled.div`
   width: 80%;
@@ -15,6 +18,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 375px) {
+    width: 80%;
+    margin-left: 27px;
+  }
+  @media (min-width: 425px) {
+    width: 80%;
+    margin-left: 45px;
+  }
 `
 const GridBox = styled.div`
   display: grid;
@@ -22,6 +34,12 @@ const GridBox = styled.div`
   height: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
 `
 const Column = styled.div`
   height: 100%;
@@ -35,6 +53,19 @@ const SH1 = styled.h1`
   font-size: 11px;
   color: #304156;
   margin-top: 20px;
+
+  @media (min-width: 425px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1900px) {
+    font-size: 15px;
+  }
 `
 const SH2 = styled.h2`
   font-family: Archivo, sans-serif;
@@ -42,6 +73,19 @@ const SH2 = styled.h2`
   font-size: 10px;
   color: #304156;
   margin-top: 20px;
+
+  @media (min-width: 425px) {
+    font-size: 11px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1900px) {
+    font-size: 14px;
+  }
 `
 const Link = styled.a`
   font-family: Archivo, sans-serif;
@@ -50,6 +94,19 @@ const Link = styled.a`
   color: #117dce;
   margin-top: 20px;
   text-decoration: none;
+
+  @media (min-width: 425px) {
+    font-size: 11px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1900px) {
+    font-size: 14px;
+  }
 `
 
 export default () => {

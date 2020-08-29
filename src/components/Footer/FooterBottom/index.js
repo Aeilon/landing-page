@@ -11,6 +11,20 @@ const BottomBar = styled.div`
   align-items: center;
   height: 56px;
   padding: 0 18px;
+
+  @media (min-width: 425px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) {
+    padding-left: 25px;
+  }
+  @media (min-width: 1024px) {
+    padding-left: 30px;
+  }
+  @media (min-width: 1440px) {
+    padding-right: 25px;
+    padding-left: 40px;
+  }
 `
 const IconsContainer = styled.div`
   height: 100%;
@@ -18,6 +32,19 @@ const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (min-width: 425px) {
+    width: 20%;
+  }
+  @media (min-width: 768px) {
+    width: 12%;
+  }
+  @media (min-width: 1024px) {
+    width: 9%;
+  }
+  @media (min-width: 1440px) {
+    width: 6%;
+  }
 `
 const Image = styled.img`
   cursor: pointer;
