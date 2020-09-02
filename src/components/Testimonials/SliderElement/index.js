@@ -8,6 +8,15 @@ const Element = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 192px;
+  }
+  @media (min-width: 1024px) {
+    width: 230px;
+    height: 220px;
+  }
 `
 const Wrapper = styled.div`
   width: 80%;
@@ -17,6 +26,10 @@ const Wrapper = styled.div`
 `
 const MessageBox = styled.div`
   flex: 2;
+
+  @media (min-width: 1024px) {
+    flex: 3;
+  }
 `
 const PersonBox = styled.div`
   flex: 1;
@@ -38,6 +51,13 @@ const SH2 = styled.h2`
   color: #304156;
   flex: 1;
   line-height: 1.4;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 `
 const Dot = styled.div`
   background: #b87ee5;
@@ -54,18 +74,39 @@ const SH4 = styled.h4`
   font-weight: 500;
   font-size: 14px;
   color: #304156;
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
 `
 const SH5 = styled.h5`
   font-family: Archivo, sans-serif;
   font-weight: 400;
   font-size: 12px;
   color: #828d99;
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
 `
 const SH3 = styled.h3`
   font-family: Archivo, sans-serif;
   font-weight: 400;
   font-size: 10px;
   color: white;
+
+  @media (min-width: 768px) {
+    font-size: 11px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 12px;
+  }
 `
 
 const SliderElement = () => {

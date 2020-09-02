@@ -14,6 +14,9 @@ const FeatureSection = styled.section`
   padding-bottom: 20px;
   padding-top: 20px;
 
+  @media (min-width: 1024px) {
+    padding-bottom: 100px;
+  }
   @media (min-width: 1440px) {
     height: 679px;
   }

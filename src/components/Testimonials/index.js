@@ -12,6 +12,16 @@ const TestimonialsSection = styled.section`
   background: #fafbfb;
   padding-bottom: 20px;
   padding-top: 20px;
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
+  @media (min-width: 1024px) {
+    height: 550px;
+  }
+  @media (min-width: 1440px) {
+    height: 600px;
+  }
 `
 const Wrapper = styled.div`
   width: 80%;
@@ -25,6 +35,10 @@ const TextBox = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1024px) {
+    flex: 2;
+  }
 `
 const SH1 = styled.h1`
   font-family: Archivo, sans-serif;
@@ -35,14 +49,45 @@ const SH1 = styled.h1`
   justify-content: center;
   align-items: center;
   flex: 1;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 27px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 29px;
+    flex: 2;
+  }
+  @media (min-width: 1440px) {
+    font-size: 32px;
+    text-align: start;
+  }
 `
 const SH2 = styled.h2`
   font-family: Archivo, sans-serif;
-  font-weight: 500;
   font-size: 13px;
   color: #304156;
   flex: 1;
   line-height: 1.4;
+  font-weight: 500;
+  text-align: center;
+
+  @media (min-width: 375px) {
+    line-height: 1.4;
+  }
+  @media (min-width: 425px) {
+    line-height: 1.5;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 17px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.8;
+  }
 `
 const SliderBox = styled.div`
   width: 100%;
@@ -50,6 +95,10 @@ const SliderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    flex: 3;
+  }
 `
 const Dot = styled.div`
   background: white;
