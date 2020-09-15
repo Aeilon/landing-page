@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import bell from "../../../images/bell.png"
-import menu from "../../../images/menu.png"
+import MenuIcon from "./MenuIcon"
 
 const IconsContainer = styled.div`
   height: 100%;
@@ -9,6 +9,7 @@ const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   @media (min-width: 425px) {
     width: 20%;
   }
@@ -26,9 +27,13 @@ const Image = styled.img`
   cursor: pointer;
 `
 
-export default () => (
-  <IconsContainer>
-    <Image src={bell} alt="bell" />
-    <Image src={menu} alt="menu" />
-  </IconsContainer>
-)
+export default ({ isMenuOpen, toggleMenuOpen }) => {
+  const handleOnClick = () => toggleMenuOpen(!isMenuOpen)
+
+  return (
+    <IconsContainer>
+      <Image src={bell} alt="bell" />
+      <MenuIcon handleOnClick={handleOnClick} isMenuOpen={isMenuOpen} />
+    </IconsContainer>
+  )
+}

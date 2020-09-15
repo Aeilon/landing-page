@@ -68,7 +68,7 @@ const FirstImage = styled.img`
   @media (min-width: 1024px) {
     width: 40%;
     top: 70px;
-    left: 200px;
+    left: 250px;
   }
   @media (min-width: 1440px) {
     width: 45%;
@@ -107,7 +107,7 @@ const SecondImage = styled.img`
   @media (min-width: 1024px) {
     width: 40%;
     top: -20px;
-    left: -230px;
+    left: -180px;
   }
   @media (min-width: 1440px) {
     width: 45%;
@@ -148,7 +148,7 @@ const ThirdImage = styled.img`
   @media (min-width: 1024px) {
     width: 40%;
     top: -270px;
-    left: 300px;
+    left: 350px;
   }
   @media (min-width: 1440px) {
     width: 45%;
@@ -230,7 +230,7 @@ const SH4 = styled.h4`
 
 export default () => {
   return (
-    <FeatureSection>
+    <FeatureSection id="feature">
       <Wrapper>
         <TasksBox>
           <FirstImage src={Task1} alt="task1" />

@@ -16,7 +16,7 @@ const Header = styled.header`
     height: 610px;
   }
   @media (min-width: 768px) {
-    height: 650px;
+    height: 750px;
     padding-bottom: 30px;
     padding-top: 30px;
   }
@@ -57,6 +57,7 @@ const HeaderBox = styled.div`
 
   @media (min-width: 768px) {
     height: 200px;
+    flex: 2;
   }
   @media (min-width: 1440px) {
     height: 50%;

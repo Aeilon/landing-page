@@ -180,7 +180,7 @@ const WhiteButton = styled.button`
 
 export default () => {
   return (
-    <JoinUsSection>
+    <JoinUsSection id="joinUs">
       <Wrapper>
         <TextBox>
           <SH1>Be part of the future. </SH1>

@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import SliderElement from "./SliderElement"
+import SliderElementOne from "./SliderElementOne"
+import SliderElementTwo from "./SliderElementTwo"
+import SliderElementThree from "./SliderElementThree"
 import ArrowLeft from "../../images/ArrowLeft.png"
 import ArrowRight from "../../images/ArrowRight.png"
 
@@ -94,7 +96,7 @@ const SliderBox = styled.div`
   flex: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (min-width: 1024px) {
     flex: 3;
@@ -109,10 +111,74 @@ const Dot = styled.div`
   justify-content: center;
   align-items: center;
 `
+const SliderElements = styled.div`
+  @media (min-width: 320px) {
+    width: 240px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 425px) {
+    width: 280px;
+  }
+  @media (min-width: 768px) {
+    width: 720px;
+    justify-content: space-around;
+  }
+  @media (min-width: 1024px) {
+    width: 750px;
+  }
+  @media (min-width: 1440px) {
+    width: 850px;
+  }
+  @media (min-width: 1600px) {
+    width: 900px;
+  }
+`
 
 export default () => {
+  const [first, setFirst] = useState(1)
+  const [second, setSecond] = useState(2)
+  const [third, setThird] = useState(3)
+
+  const nextFN = () => {
+    if (first === 3) {
+      setFirst(1)
+      setSecond(2)
+      setThird(3)
+    }
+    if (second === 3) {
+      setSecond(1)
+      setFirst(3)
+      setThird(2)
+    }
+    if (third === 3) {
+      setThird(1)
+      setFirst(2)
+      setSecond(3)
+    }
+  }
+  const prevFN = () => {
+    if (first === 1) {
+      setFirst(3)
+      setSecond(1)
+      setThird(2)
+    }
+    if (second === 1) {
+      setSecond(3)
+      setFirst(2)
+      setThird(1)
+    }
+    if (third === 1) {
+      setThird(3)
+      setFirst(1)
+      setSecond(2)
+    }
+  }
+
   return (
-    <TestimonialsSection>
+    <TestimonialsSection id="testimonials">
       <Wrapper>
         <TextBox>
           <SH1>People About Us</SH1>
@@ -123,11 +189,16 @@ export default () => {
         </TextBox>
         <SliderBox>
           <Dot>
-            <img src={ArrowLeft} alt="arrow" />
+            <img src={ArrowLeft} alt="arrow" onClick={() => prevFN()} />
           </Dot>
-          <SliderElement />
+
+          <SliderElements>
+            <SliderElementOne first={first} />
+            <SliderElementTwo second={second} />
+            <SliderElementThree third={third} />
+          </SliderElements>
           <Dot>
-            <img src={ArrowRight} alt="arrow" />
+            <img src={ArrowRight} alt="arrow" onClick={() => nextFN()} />
           </Dot>
         </SliderBox>
       </Wrapper>

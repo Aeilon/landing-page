@@ -1,17 +1,23 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Element = styled.div`
   width: 186px;
   height: 178px;
   display: flex;
+  background: white;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  //border: 1px solid black;
+
+  ${({ second }) =>
+    css`
+      order: ${second};
+    `};
 
   @media (min-width: 768px) {
-    width: 200px;
-    height: 192px;
+    width: 180px;
+    height: 182px;
   }
   @media (min-width: 1024px) {
     width: 230px;
@@ -60,7 +66,7 @@ const SH2 = styled.h2`
   }
 `
 const Dot = styled.div`
-  background: #b87ee5;
+  background: #3e9bf9;
   color: white;
   border-radius: 100%;
   width: 32px;
@@ -109,22 +115,22 @@ const SH3 = styled.h3`
   }
 `
 
-const SliderElement = () => {
+const SliderElementTwo = ({ second }) => {
   return (
-    <Element>
+    <Element second={second}>
       <Wrapper>
         <MessageBox>
-          <SH2>A Discount Toner Cartridge Is Better Than Ever</SH2>
+          <SH2>While most people enjoy casino gambling sports betting</SH2>
         </MessageBox>
         <PersonBox>
           <AvatarBox>
             <Dot>
-              <SH3>CL</SH3>
+              <SH3>JG</SH3>
             </Dot>
           </AvatarBox>
           <NameBox>
-            <SH4>Chris Lages</SH4>
-            <SH5>Oneink</SH5>
+            <SH4>Joseph Guerrero</SH4>
+            <SH5>Paypal</SH5>
           </NameBox>
         </PersonBox>
       </Wrapper>
@@ -132,4 +138,4 @@ const SliderElement = () => {
   )
 }
 
-export default SliderElement
+export default SliderElementTwo

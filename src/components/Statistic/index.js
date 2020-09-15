@@ -44,7 +44,6 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 65%;
-    //margin-left: 10%;
   }
 `
 const TextBox = styled.div`
@@ -149,7 +148,7 @@ const Image = styled.img`
 
 export default () => {
   return (
-    <StatisticSection>
+    <StatisticSection id="statistics">
       <Wrapper>
         <TextBox>
           <SH1>Statistics Coverage</SH1>

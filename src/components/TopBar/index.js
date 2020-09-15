@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import logo from "../../images/logo.png"
 import IconsContainer from "./IconsContainer"
+import Menu from "./Menu"
 
 const TopBar = styled.div`
   width: 100%;
@@ -10,6 +11,11 @@ const TopBar = styled.div`
   align-items: center;
   height: 56px;
   padding: 0 18px;
+  position: sticky;
+  background: white;
+  top: 0;
+  z-index: 99;
+
   @media (min-width: 425px) {
     padding: 0 20px;
   }
@@ -25,9 +31,19 @@ const TopBar = styled.div`
   }
 `
 
-export default () => (
-  <TopBar>
-    <img src={logo} alt="logo" />
-    <IconsContainer />
-  </TopBar>
-)
+export default () => {
+  const [isMenuOpen, toggleMenuOpen] = useState(false)
+
+  return (
+    <>
+      <TopBar>
+        <img src={logo} alt="logo" />
+        <IconsContainer
+          isMenuOpen={isMenuOpen}
+          toggleMenuOpen={toggleMenuOpen}
+        />
+      </TopBar>
+      <Menu isMenuOpen={isMenuOpen} toggleMenuOpen={toggleMenuOpen} />
+    </>
+  )
+}

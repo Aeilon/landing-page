@@ -119,7 +119,7 @@ const FeaturesBox = styled.div`
 
 export default () => {
   return (
-    <FeaturesSection>
+    <FeaturesSection id="features">
       <Wrapper>
         <TextBox>
           <SH1>Download Anything Now A Days</SH1>
