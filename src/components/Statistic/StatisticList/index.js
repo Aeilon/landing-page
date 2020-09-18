@@ -5,16 +5,18 @@ const ListBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  flex: 1;
+  align-items: center;
+  height: 10%;
+  z-index: 1;
 
-  @media (min-width: 768px) {
-    position: relative;
-    right: 40px;
-    bottom: 140px;
-  }
-  @media (min-width: 1900px) {
-    right: 125px;
-  }
+  //@media (min-width: 768px) {
+  //  position: relative;
+  //  right: 40px;
+  //  bottom: 140px;
+  //}
+  //@media (min-width: 1900px) {
+  //  right: 125px;
+  //}
 `
 const ImgBox = styled.div`
   flex: 1;

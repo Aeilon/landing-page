@@ -5,22 +5,19 @@ import Statistic1 from "../../images/Statistic1.png"
 import Statistic2 from "../../images/Statistic2.png"
 import Statistic3 from "../../images/Statistic3.png"
 import StatisticList from "./StatisticList"
+import StatisticBar from "./StatisticBar"
+import RegistrationStatistics from "./RegistrationStatistics"
+import InstagramStatistics from "./InstagramStatistics"
 
 const StatisticSection = styled.section`
   width: 100%;
-  height: 650px;
+  height: 900px;
   display: flex;
   justify-content: center;
   background: #fafbfb;
   padding-bottom: 20px;
   padding-top: 20px;
 
-  @media (min-width: 375px) {
-    height: 700px;
-  }
-  @media (min-width: 425px) {
-    height: 750px;
-  }
   @media (min-width: 1440px) {
     height: 657px;
     padding-bottom: 0;
@@ -66,6 +63,7 @@ const IllustrationBox = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: 768px) {
     width: 70%;
@@ -159,10 +157,14 @@ export default () => {
           <StatisticButton />
         </TextBox>
         <IllustrationBox>
-          <Image src={Statistic1} alt="1" zIndex="2" />
-          <Image src={Statistic2} alt="2" zIndex="3" left="120px" top="-70px" />
-          <Image src={Statistic3} alt="3" top="-150px" zIndex="1" />
-          <StatisticList />
+          <StatisticBar />
+          <RegistrationStatistics />
+          <InstagramStatistics />
+
+          {/*<Image src={Statistic1} alt="2" zIndex="2" />*/}
+          {/*<Image src={Statistic2} alt="2" zIndex="3" left="120px" top="-70px" />*/}
+          {/*<Image src={Statistic3} alt="3" top="-150px" zIndex="1" />*/}
+          {/*<StatisticList />*/}
         </IllustrationBox>
       </Wrapper>
     </StatisticSection>
