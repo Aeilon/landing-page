@@ -129,10 +129,10 @@ export default () => {
           </SH2>
         </TextBox>
         <FeaturesBox>
-          <Feature />
-          <Feature />
-          <Feature />
-          <Feature />
+          <Feature delay="100" />
+          <Feature delay="300" />
+          <Feature delay="400" />
+          <Feature delay="500" />
         </FeaturesBox>
       </Wrapper>
     </FeaturesSection>

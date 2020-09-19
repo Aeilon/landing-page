@@ -181,7 +181,11 @@ const WhiteButton = styled.button`
 export default () => {
   return (
     <JoinUsSection id="joinUs">
-      <Wrapper>
+      <Wrapper
+        data-sal="zoom-in"
+        data-sal-easing="ease-in-out"
+        data-sal-duration="700"
+      >
         <TextBox>
           <SH1>Be part of the future. </SH1>
           <SH1>Join Us.</SH1>

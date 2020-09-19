@@ -103,9 +103,14 @@ const SH5 = styled.h5`
   }
 `
 
-const Feature = () => {
+const Feature = ({ delay }) => {
   return (
-    <FeatureBox>
+    <FeatureBox
+      data-sal="slide-up"
+      data-sal-delay={delay}
+      data-sal-easing="ease-in-out"
+      data-sal-duration="700"
+    >
       <IconBox>
         <Icon>
           <img src={FeatIcon} alt="icon" />

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const RegistrationStatistics = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ const RegistrationStatistics = styled.div`
 `
 const TextBox = styled.div`
   height: 100%;
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 
@@ -35,7 +35,7 @@ const TextBox = styled.div`
   }
 `
 const RegistrationsBox = styled.div`
-  width: 100%;
+  width: 80%;
   height: 60%;
   display: flex;
   flex-direction: column;
@@ -114,31 +114,27 @@ const SH4 = styled.h4`
   }
 `
 const SH2 = styled.h2`
-  position: relative;
+  position: absolute;
   font-size: 20px;
   font-family: Archivo, sans-serif;
   font-weight: 500;
   color: #304156;
-  bottom: 97px;
-  left: 58px;
+  bottom: 46%;
+  left: 40%;
 
-  @media (min-width: 375px) {
-    left: 55px;
-    bottom: 95px;
-  }
-  @media (min-width: 425px) {
-    left: 62px;
-    bottom: 93px;
-  }
   @media (min-width: 768px) {
-    left: 77px;
-    bottom: 95px;
+    bottom: 46%;
+    left: 43%;
   }
 `
 
 const CircleBox = styled.div`
   height: 100%;
-  width: 65%;
+  width: 50%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 375px) {
     width: 46%;
@@ -148,21 +144,9 @@ const CircleBox = styled.div`
   }
 `
 const StyledSVG = styled.svg`
-  width: 100%;
-  height: 100%;
+  width: 128px;
+  height: 128px;
   transform: rotate(270deg);
-  position: relative;
-  top: 12px;
-
-  @media (min-width: 375px) {
-    top: 20px;
-  }
-  @media (min-width: 425px) {
-    top: 10px;
-  }
-  @media (min-width: 768px) {
-    top: -5px;
-  }
 `
 const SCircle = styled.circle`
   fill: none;
@@ -177,101 +161,19 @@ const SCircle = styled.circle`
     stroke: #eff4f7;
   }
   &:nth-child(2) {
-    stroke-dashoffset: calc(315 - (315 * 63) / 100);
-    stroke: #fd4d7a;
-    animation: animate-circle 1s cubic-bezier(0, 0.23, 1, 0.1);
-    animation-delay: 2s;
-  }
-  @keyframes animate-circle {
-    0% {
-      opacity: 0;
-      stroke-dashoffset: 315;
-    }
-    5% {
-      opacity: 0.05;
-      stroke-dashoffset: 304;
-    }
-    10% {
-      opacity: 0.1;
-      stroke-dashoffset: 293;
-    }
-    15% {
-      opacity: 0.15;
-      stroke-dashoffset: 282;
-    }
-    20% {
-      opacity: 0.2;
-      stroke-dashoffset: 271;
-    }
-    25% {
-      opacity: 0.25;
-      stroke-dashoffset: 260;
-    }
-    30% {
-      opacity: 0.3;
-      stroke-dashoffset: 249;
-    }
-    35% {
-      opacity: 0.35;
-      stroke-dashoffset: 238;
-    }
-    40% {
-      opacity: 0.4;
-      stroke-dashoffset: 227;
-    }
-    45% {
-      opacity: 0.45;
-      stroke-dashoffset: 216;
-    }
-    50% {
-      opacity: 0.5;
-      stroke-dashoffset: 205;
-    }
-    55% {
-      opacity: 0.55;
-      stroke-dashoffset: 194;
-    }
-    60% {
-      opacity: 0.6;
-      stroke-dashoffset: 183;
-    }
-    65% {
-      opacity: 0.65;
-      stroke-dashoffset: 172;
-    }
-    70% {
-      opacity: 0.7;
-      stroke-dashoffset: 161;
-    }
-    75% {
-      opacity: 0.75;
-      stroke-dashoffset: 150;
-    }
-    80% {
-      opacity: 0.8;
-      stroke-dashoffset: 139;
-    }
-    85% {
-      opacity: 0.85;
-      stroke-dashoffset: 128;
-    }
+    stroke-dashoffset: 315;
 
-    90% {
-      opacity: 0.9;
-      stroke-dashoffset: 122;
-    }
-    95% {
-      opacity: 0.95;
-      stroke-dashoffset: 118;
-    }
-    100% {
-      opacity: 1;
-      stroke-dashoffset: calc(315 - (315 * 63) / 100);
-    }
+    ${({ onScreen }) =>
+      onScreen &&
+      css`
+        stroke: #fd4d7a;
+        animation: animate-circle 1s cubic-bezier(0, 0.23, 1, 0.1);
+        animation-fill-mode: forwards;
+      `}
   }
 `
 
-export default () => {
+export default ({ onScreen }) => {
   return (
     <RegistrationStatistics>
       <TextBox>
@@ -285,8 +187,8 @@ export default () => {
       </TextBox>
       <CircleBox>
         <StyledSVG>
-          <SCircle cx="80" cy="80" r="50" />
-          <SCircle cx="80" cy="80" r="50" />
+          <SCircle cx="50%" cy="50%" r="50" />
+          <SCircle cx="50%" cy="50%" r="50" onScreen={onScreen} />
         </StyledSVG>
         <SH2>63%</SH2>
       </CircleBox>

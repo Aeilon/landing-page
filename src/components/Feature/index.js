@@ -232,12 +232,20 @@ export default () => {
   return (
     <FeatureSection id="feature">
       <Wrapper>
-        <TasksBox>
+        <TasksBox
+          data-sal="slide-right"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="700"
+        >
           <FirstImage src={Task1} alt="task1" />
           <SecondImage src={Task2} alt="task2" />
           <ThirdImage src={Task3} alt="task3" />
         </TasksBox>
-        <TextBox>
+        <TextBox
+          data-sal="slide-up"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="700"
+        >
           <SH1>Addiction When</SH1>
           <SH4>
             Okay, you’ve decided you want to make money with Affiliate

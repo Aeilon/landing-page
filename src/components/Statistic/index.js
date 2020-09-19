@@ -1,17 +1,14 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "styled-components"
 import StatisticButton from "./StatisticButton"
-import Statistic1 from "../../images/Statistic1.png"
-import Statistic2 from "../../images/Statistic2.png"
-import Statistic3 from "../../images/Statistic3.png"
-import StatisticList from "./StatisticList"
 import StatisticBar from "./StatisticBar"
 import RegistrationStatistics from "./RegistrationStatistics"
 import InstagramStatistics from "./InstagramStatistics"
+import useOnScreen from "../../hooks/useOnScreen"
 
 const StatisticSection = styled.section`
   width: 100%;
-  height: 900px;
+  height: 950px;
   display: flex;
   justify-content: center;
   background: #fafbfb;
@@ -127,28 +124,18 @@ const SH4 = styled.h4`
     text-align: start;
   }
 `
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  flex: 1;
-
-  @media (min-width: 768px) {
-    position: relative;
-    width: 80%;
-    top: ${props => props.top};
-    left: ${props => props.left};
-    z-index: ${props => props.zIndex};
-  }
-  @media (min-width: 1900px) {
-    width: 60%;
-  }
-`
 
 export default () => {
+  const ref = useRef()
+  const onScreen = useOnScreen(ref, "-50%")
   return (
-    <StatisticSection id="statistics">
+    <StatisticSection id="statistics" ref={ref}>
       <Wrapper>
-        <TextBox>
+        <TextBox
+          data-sal="slide-up"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="700"
+        >
           <SH1>Statistics Coverage</SH1>
           <SH4>
             Click on the link website-hosting-reviews-free and you would know
@@ -158,13 +145,8 @@ export default () => {
         </TextBox>
         <IllustrationBox>
           <StatisticBar />
-          <RegistrationStatistics />
-          <InstagramStatistics />
-
-          {/*<Image src={Statistic1} alt="2" zIndex="2" />*/}
-          {/*<Image src={Statistic2} alt="2" zIndex="3" left="120px" top="-70px" />*/}
-          {/*<Image src={Statistic3} alt="3" top="-150px" zIndex="1" />*/}
-          {/*<StatisticList />*/}
+          <RegistrationStatistics onScreen={onScreen} />
+          <InstagramStatistics onScreen={onScreen} />
         </IllustrationBox>
       </Wrapper>
     </StatisticSection>

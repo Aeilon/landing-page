@@ -229,7 +229,11 @@ export default () => {
   return (
     <Header>
       <Wrapper>
-        <HeaderBox>
+        <HeaderBox
+          data-sal="slide-right"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="700"
+        >
           <Alert />
           <SH1>Help Finding Information Online</SH1>
           <SH5>
@@ -242,7 +246,11 @@ export default () => {
             <WhiteButton>Button Name</WhiteButton>
           </ButtonsBox>
         </HeaderBox>
-        <ImageBox>
+        <ImageBox
+          data-sal="slide-left"
+          data-sal-easing="ease-in-out"
+          data-sal-duration="700"
+        >
           <Image src={laptopImage} alt="laptop" />
         </ImageBox>
       </Wrapper>
