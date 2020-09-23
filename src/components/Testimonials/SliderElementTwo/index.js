@@ -4,20 +4,45 @@ import styled, { css } from "styled-components"
 const Element = styled.div`
   width: 186px;
   height: 178px;
+  position: absolute;
   display: flex;
   background: white;
   justify-content: center;
   align-items: center;
-  //border: 1px solid black;
+  box-shadow: 0 0 5px 0.1px rgba(225, 225, 225, 0.8);
 
-  ${({ second }) =>
-    css`
-      order: ${second};
-    `};
+  ${({ elements, setElements }) =>
+    elements.second > 3
+      ? setElements({ ...elements, second: 1 })
+      : elements.second < 1
+      ? setElements({ ...elements, second: 3 })
+      : css`
+          z-index: ${elements.second};
+        `};
 
   @media (min-width: 768px) {
     width: 180px;
     height: 182px;
+    display: flex;
+    position: static;
+    z-index: 1;
+
+    ${({ elements, setElements }) =>
+      elements.second > 3
+        ? setElements({ ...elements, second: 1 })
+        : elements.second < 1
+        ? setElements({ ...elements, second: 3 })
+        : css`
+            order: ${elements.second};
+          `};
+
+    ${({ elements }) =>
+      elements.second === 2 &&
+      css`
+        transform: scale(1.15);
+        box-shadow: 0 0 5px 0.1px #666;
+        z-index: 2;
+      `}
   }
   @media (min-width: 1024px) {
     width: 230px;
@@ -115,9 +140,9 @@ const SH3 = styled.h3`
   }
 `
 
-const SliderElementTwo = ({ second }) => {
+const SliderElementTwo = ({ elements, setElements }) => {
   return (
-    <Element second={second}>
+    <Element elements={elements} setElements={setElements}>
       <Wrapper>
         <MessageBox>
           <SH2>While most people enjoy casino gambling sports betting</SH2>

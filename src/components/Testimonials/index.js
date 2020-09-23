@@ -112,13 +112,12 @@ const Dot = styled.div`
   align-items: center;
 `
 const SliderElements = styled.div`
-  @media (min-width: 320px) {
-    width: 240px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: 240px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (min-width: 425px) {
     width: 280px;
   }
@@ -138,43 +137,25 @@ const SliderElements = styled.div`
 `
 
 export default () => {
-  const [first, setFirst] = useState(1)
-  const [second, setSecond] = useState(2)
-  const [third, setThird] = useState(3)
+  const [elements, setElements] = useState({
+    first: 1,
+    second: 2,
+    third: 3,
+  })
 
   const nextFN = () => {
-    if (first === 3) {
-      setFirst(1)
-      setSecond(2)
-      setThird(3)
-    }
-    if (second === 3) {
-      setSecond(1)
-      setFirst(3)
-      setThird(2)
-    }
-    if (third === 3) {
-      setThird(1)
-      setFirst(2)
-      setSecond(3)
-    }
+    setElements({
+      first: elements.first + 1,
+      second: elements.second + 1,
+      third: elements.third + 1,
+    })
   }
   const prevFN = () => {
-    if (first === 1) {
-      setFirst(3)
-      setSecond(1)
-      setThird(2)
-    }
-    if (second === 1) {
-      setSecond(3)
-      setFirst(2)
-      setThird(1)
-    }
-    if (third === 1) {
-      setThird(3)
-      setFirst(1)
-      setSecond(2)
-    }
+    setElements({
+      first: elements.first - 1,
+      second: elements.second - 1,
+      third: elements.third - 1,
+    })
   }
 
   return (
@@ -188,17 +169,17 @@ export default () => {
           </SH2>
         </TextBox>
         <SliderBox>
-          <Dot>
-            <img src={ArrowLeft} alt="arrow" onClick={() => prevFN()} />
+          <Dot onClick={() => prevFN()}>
+            <img src={ArrowLeft} alt="arrow" />
           </Dot>
 
           <SliderElements>
-            <SliderElementOne first={first} />
-            <SliderElementTwo second={second} />
-            <SliderElementThree third={third} />
+            <SliderElementOne elements={elements} setElements={setElements} />
+            <SliderElementTwo elements={elements} setElements={setElements} />
+            <SliderElementThree elements={elements} setElements={setElements} />
           </SliderElements>
-          <Dot>
-            <img src={ArrowRight} alt="arrow" onClick={() => nextFN()} />
+          <Dot onClick={() => nextFN()}>
+            <img src={ArrowRight} alt="arrow" />
           </Dot>
         </SliderBox>
       </Wrapper>

@@ -4,21 +4,45 @@ import styled, { css } from "styled-components"
 const Element = styled.div`
   width: 186px;
   height: 178px;
-  display: none;
+  position: absolute;
+  display: flex;
   background: white;
   justify-content: center;
   align-items: center;
-  //border: 1px solid black;
+  box-shadow: 0 0 5px 0.1px rgba(225, 225, 225, 0.8);
 
-  ${({ first }) =>
-    css`
-      order: ${first};
-    `};
+  ${({ elements, setElements }) =>
+    elements.first > 3
+      ? setElements({ ...elements, first: 1 })
+      : elements.first < 1
+      ? setElements({ ...elements, first: 3 })
+      : css`
+          z-index: ${elements.first};
+        `};
 
   @media (min-width: 768px) {
     width: 180px;
     height: 182px;
     display: flex;
+    position: static;
+    z-index: 1;
+
+    ${({ elements, setElements }) =>
+      elements.first > 3
+        ? setElements({ ...elements, first: 1 })
+        : elements.first < 1
+        ? setElements({ ...elements, first: 3 })
+        : css`
+            order: ${elements.first};
+          `};
+
+    ${({ elements }) =>
+      elements.first === 2 &&
+      css`
+        transform: scale(1.15);
+        box-shadow: 0 0 5px 0.1px #666;
+        z-index: 2;
+      `}
   }
   @media (min-width: 1024px) {
     width: 230px;
@@ -116,9 +140,9 @@ const SH3 = styled.h3`
   }
 `
 
-const SliderElementOne = ({ first }) => {
+const SliderElementOne = ({ elements, setElements }) => {
   return (
-    <Element first={first}>
+    <Element elements={elements} setElements={setElements}>
       <Wrapper>
         <MessageBox>
           <SH2>A Discount Toner Cartridge Is Better Than Ever</SH2>

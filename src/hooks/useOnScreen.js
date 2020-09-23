@@ -4,6 +4,7 @@ export default function useOnScreen(ref, rootMargin = "0px") {
   const [isIntersecting, setIntersecting] = useState(false)
 
   useEffect(() => {
+    if (isIntersecting) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIntersecting(entry.isIntersecting)
@@ -18,7 +19,7 @@ export default function useOnScreen(ref, rootMargin = "0px") {
     return () => {
       observer.unobserve(ref.current)
     }
-  }, [])
+  }, [isIntersecting])
 
   return isIntersecting
 }

@@ -4,12 +4,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
- * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Archivo, sans-serif;
-scroll-behavior: smooth;
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Archivo, sans-serif;
+  scroll-behavior: smooth;
+  
+  img{
+    user-select: none;
+  }
 
   @keyframes animate-circle {
     0% {

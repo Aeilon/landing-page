@@ -4,21 +4,45 @@ import styled, { css } from "styled-components"
 const Element = styled.div`
   width: 186px;
   height: 178px;
-  display: none;
+  display: flex;
+  position: absolute;
   background: white;
   justify-content: center;
   align-items: center;
-  //border: 1px solid black;
+  box-shadow: 0 0 5px 0.1px rgba(225, 225, 225, 0.8);
 
-  ${({ third }) =>
-    css`
-      order: ${third};
-    `};
+  ${({ elements, setElements }) =>
+    elements.third > 3
+      ? setElements({ ...elements, third: 1 })
+      : elements.third < 1
+      ? setElements({ ...elements, third: 3 })
+      : css`
+          z-index: ${elements.third};
+        `};
 
   @media (min-width: 768px) {
     width: 180px;
     height: 182px;
     display: flex;
+    position: static;
+    z-index: 1;
+
+    ${({ elements, setElements }) =>
+      elements.third > 3
+        ? setElements({ ...elements, third: 1 })
+        : elements.third < 1
+        ? setElements({ ...elements, third: 3 })
+        : css`
+            order: ${elements.third};
+          `};
+
+    ${({ elements }) =>
+      elements.third === 2 &&
+      css`
+        transform: scale(1.15);
+        box-shadow: 0 0 5px 0.1px #666;
+        z-index: 2;
+      `}
   }
   @media (min-width: 1024px) {
     width: 230px;
@@ -116,9 +140,9 @@ const SH3 = styled.h3`
   }
 `
 
-const SliderElementThree = ({ third }) => {
+const SliderElementThree = ({ elements, setElements }) => {
   return (
-    <Element third={third}>
+    <Element elements={elements} setElements={setElements}>
       <Wrapper>
         <MessageBox>
           <SH2>Will The Democrats Be Able To Reverse</SH2>
