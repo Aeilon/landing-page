@@ -9,6 +9,10 @@ const MenuIcon = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
+  &:hover {
+    filter: saturate(5);
+  }
 `
 const Line = styled.div`
   background: #475f7b;

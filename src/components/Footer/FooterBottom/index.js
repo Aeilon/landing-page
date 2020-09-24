@@ -48,6 +48,10 @@ const IconsContainer = styled.div`
 `
 const Image = styled.img`
   cursor: pointer;
+
+  &:hover {
+    filter: saturate(15);
+  }
 `
 
 const FooterBottom = () => {

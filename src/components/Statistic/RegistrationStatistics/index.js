@@ -100,6 +100,10 @@ const SH4 = styled.h4`
   margin-left: 30px;
   cursor: pointer;
 
+  &:hover {
+    color: #135df7;
+  }
+
   @media (min-width: 425px) {
     font-size: 13px;
   }

@@ -3,11 +3,10 @@ import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 
 const Menu = styled.div`
-  ackground: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 30%,
-    rgba(250, 251, 251, 1) 100%
+    rgba(245, 245, 245, 1) 100%
   );
   height: 0;
   width: 100%;
@@ -20,13 +19,6 @@ const Menu = styled.div`
   ${({ isMenuOpen }) =>
     isMenuOpen &&
     css`
-      //@media (min-width: 320px) {
-      //  height: 100vh;
-      //}
-      //@media (min-width: 1440px) {
-      //  height: auto;
-      //  padding-bottom: 30px;
-      //}
       height: 100vh;
     `}
 `
@@ -41,6 +33,10 @@ const StyledLink = styled(Link)`
   margin-left: 5%;
   letter-spacing: 1.6px;
   line-height: 40px;
+
+  &:hover {
+    color: #135df7;
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -96,6 +92,12 @@ const BlueButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #0093ff;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #299cf3;
+    transition: background 0.15s;
+  }
 
   @media (min-width: 425px) {
     font-size: 14px;

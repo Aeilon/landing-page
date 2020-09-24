@@ -108,6 +108,7 @@ const ButtonBox = styled.div`
 const BlueButton = styled.button`
   width: 111px;
   height: 40px;
+
   background: #0093ff;
   font-family: Archivo-Medium, sans-serif;
   font-size: 13px;
@@ -115,6 +116,12 @@ const BlueButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #0093ff;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #299cf3;
+    transition: background 0.15s;
+  }
 
   @media (min-width: 425px) {
     font-size: 14px;
@@ -151,6 +158,12 @@ const WhiteButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid lightgray;
+  transition: background 0.15s;
+
+  &:hover {
+    background: whitesmoke;
+    transition: background 0.15s;
+  }
 
   @media (min-width: 425px) {
     font-size: 14px;

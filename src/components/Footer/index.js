@@ -73,6 +73,11 @@ const SH2 = styled.h2`
   font-size: 10px;
   color: #304156;
   margin-top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: #135df7;
+  }
 
   @media (min-width: 425px) {
     font-size: 11px;
@@ -94,6 +99,10 @@ const Link = styled.a`
   color: #117dce;
   margin-top: 20px;
   text-decoration: none;
+
+  &:hover {
+    color: #135df7;
+  }
 
   @media (min-width: 425px) {
     font-size: 11px;

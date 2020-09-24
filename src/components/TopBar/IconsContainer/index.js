@@ -25,6 +25,10 @@ const IconsContainer = styled.div`
 `
 const Image = styled.img`
   cursor: pointer;
+
+  &:hover {
+    filter: saturate(5);
+  }
 `
 
 export default ({ isMenuOpen, toggleMenuOpen }) => {

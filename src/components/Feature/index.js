@@ -7,7 +7,7 @@ import StatisticButton from "../Statistic/StatisticButton"
 
 const FeatureSection = styled.section`
   width: 100%;
-  height: 650px;
+  height: 700px;
   display: flex;
   justify-content: center;
   background: #ffffff;
@@ -170,7 +170,7 @@ const ThirdImage = styled.img`
 const TextBox = styled.div`
   width: 100%;
   display: flex;
-  height: 30%;
+  height: 50%;
   flex-direction: column;
   justify-content: space-evenly;
 

@@ -162,6 +162,12 @@ const BlueButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #0093ff;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #299cf3;
+    transition: background 0.15s;
+  }
 
   @media (min-width: 425px) {
     font-size: 14px;
@@ -198,6 +204,12 @@ const WhiteButton = styled.button`
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid lightgray;
+  transition: background 0.15s;
+
+  &:hover {
+    background: whitesmoke;
+    transition: background 0.15s;
+  }
 
   @media (min-width: 425px) {
     font-size: 14px;

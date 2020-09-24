@@ -110,6 +110,14 @@ const Dot = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover {
+    filter: saturate(5);
+    background: whitesmoke;
+    transition: background 0.15s;
+  }
 `
 const SliderElements = styled.div`
   width: 240px;

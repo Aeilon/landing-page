@@ -8,15 +8,6 @@ const ListBox = styled.div`
   align-items: center;
   height: 10%;
   z-index: 1;
-
-  //@media (min-width: 768px) {
-  //  position: relative;
-  //  right: 40px;
-  //  bottom: 140px;
-  //}
-  //@media (min-width: 1900px) {
-  //  right: 125px;
-  //}
 `
 const ImgBox = styled.div`
   flex: 1;
@@ -57,6 +48,10 @@ const SH3 = styled.h3`
   font-weight: 500;
   font-size: 10px;
   color: #304156;
+
+  &:hover {
+    color: #135df7;
+  }
 
   @media (min-width: 768px) {
     position: relative;
